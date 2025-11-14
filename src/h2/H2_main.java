@@ -4,12 +4,24 @@ public class H2_main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input = 20;
+		int input = 10;
 		boolean x,y,a,b,c;
-		
-		x = (input == 10 || input == 11);
-		y = ( input == 11 || input == 1);
-		
+		x = false;
+		y = false;
+		if (input == 10) {
+			x = true;
+			y = false;
+		} else if (input == 11) {
+			x = true;
+			y = true;
+		}
+		else if ( input == 1) {
+			x = false;
+			y = true;
+		} else {
+			x = false;
+			y = false;
+		}
 		a = (x && y);
 		b = (x ||(x!=y));
 		c = (!y);
@@ -21,6 +33,6 @@ public class H2_main {
         System.out.println("b ist: " + b); 
         System.out.println("c ist: " + c); 
 		
+		
 	}
-
 }
